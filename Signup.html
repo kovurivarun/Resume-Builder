@@ -4,11 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="./Signup.css">
     <script src="https://kit.fontawesome.com/e95cfce662.js" crossorigin="anonymous"></script>
+    <script src="Signupvalidation.js"></script>
     <title>Signup</title>
 </head>
 <body>
-    <h1>hi</h1>
+    <header>
+        <div class="container">
+            <div>
+               <a href="index.html"> <p class="logo">Resume Builder</p></a>
+            </div>
+          <nav>
+            <ul>
+                <li><a href="loginpage.html">Login</a></li>
+                <li><a href="Signup.html" target="_blank" >Signup</a></li>
+                <li><a href="#" targrt="_blank">About Us</a></li>
+            </ul>
+          </nav> 
+        </div>   
+    </header>
+   
+<main>
+  <section>
+    <div class="container1">
+     <span class="title">Signup</span>
+        <form action="#">
+            <div class="details">
+                <div class="form first">
+                  <div class="fields">
+                      <div class="input-field" id="firstname">
+                        <label>First Name</label>   
+                        <input type="text" placeholder="first name: " name="firstname" required>
+                        
+                      </div>
+                      <div class="input-field"id="lastname">
+                         <label>Last Name</label>
+                          <input type="text" placeholder="last name" required>
+                          
+                      </div>
+                       <div class="input-field"id=dob>
+                         <label>Date of Birth</label>
+                         <input type="date" placeholder="Enter birth date" required>
+                       </div>
+                       
+                       <div class="input-field"id=gender>
+                          <label>Gender</label>
+                          <input type="text" placeholder="Gender" required>
+                          
+                        </div>
+
+                       <div class="input-field" id="mobile-number">
+                          <label>Mobile Number</label>
+                          <input type="number"  placeholder="Enter mobile number" name="mobile-number" minlength="10" maxlength="10" required 
+                           pattern="[0-9]{10}"
+                           title="Invalid mobile number! Please enter a 10-digit number."> 
+                           
+                        </div>
+                       <div class="input-field" id="email">
+                          <label>Email</label>
+                         <input type="text" placeholder="Email" required>
+                        </div>
+
+                        <div class="input-field" id="password">
+                           <label for="password">password:</label>
+                          <input type="password" placeholder="Password" required minlength="8" maxlength="20"
+                           required 
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                           title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number">
+                        </div>
+
+                        <div class="input-field" id="confirm_password" >
+                           <label for="confirm_password">confirm password:</label>
+                           <input type="password"  name="confirm_password" required 
+                           title="Please enter the same password as above">
+                        </div> 
+                         <span><button type="submit">Submit</button></span>
+                                          
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+ </section>
+ </main>
+ 
+                
+<script>
+    function seterror(id,error){
+
+    }
+    
+</script>
 </body>
 </html>
