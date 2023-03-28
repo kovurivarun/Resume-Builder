@@ -18,7 +18,11 @@ li{
 header{ 
      /* background-color: #ffffff;  */
      background-color: #ffffff;
-    height: 5rem;
+     /* background-color: antiquewhite; */
+    height: 4.5rem;
+    position:fixed;
+    z-index: 1;
+    width:100%
     /* display: inline;
     width: 100rem; */
 }
@@ -94,7 +98,7 @@ section.banner h1{
     /* border: 1px solid#000000; */
      align-items:center;
      margin: auto; 
-     margin-top:50px; 
+     margin-top:10rem;; 
     background-color: rgba(0,0,0,0.5);
     border-radius: 25px;
 } 

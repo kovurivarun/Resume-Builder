@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		/* CSS for Navigation Bar */
+		/* nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #333;
+			color: white;
+			padding: 10px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		nav ul {
+			list-style: none;
+			display: flex;
+			margin: 0;
+			padding: 0;
+		}
+
+		nav ul li {
+			margin: 0 10px;
+			cursor: pointer;
+		} */
+
+		/* CSS for Sidebar */
+		.sidebar {
+			width: 300px;
+			background-color: #f2f2f2;
+			padding: 20px;
+			height: 90vh;
+			position: fixed;
+			left: 0;
+			top: 0;
+			overflow-y: scroll;
+		}
+
+		.sidebar ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.sidebar ul li {
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+
+		/* CSS for Form */
+		.form {
+			margin-top: 20px;
+		}
+
+		.form label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		.form input[type="text"],
+		.form input[type="date"],
+		.form input[type="email"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		.form button {
+			padding: 10px 20px;
+			background-color: #333;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.form button:hover {
+			background-color: #555;
+		}
+	</style>
+</head>
+
+    
+
+
+
+<body>
+	<!-- Navigation Bar -->
+	<nav>
+		<span>Resume Builder</span>
+		<ul>
+			<li>Home</li>
+			<li>Build Profile</li>
+			<li>Design Resume</li>
+			<li>Resume Builder</li>
+		</ul>
+	</nav>
+
+	<!-- Sidebar -->
+	<div class="sidebar">
+		<ul>
+			<li>Personal Information</li>
+			<li>Contact Information</li>
+			<li>Education</li>
+			<li>Projects</li>
+			<li>Skills</li>
+			<li>Hobbies</li>
+		</ul>
+	</div>
+
+	<!-- Form for Personal Information -->
+	<div class="form" style="display:none;">
+		<h2>Personal Information</h2>
+		<form>
+			<label for="firstName">First Name</label>
+			<input type="text" id="firstName" name="firstName" required>
+
+			<label for="lastName">Last Name</label>
+			<input type="text" id="lastName" name="lastName" required>
+
+			<label for="middleName">Middle Name</label>
+			<input type="text" id="middleName" name="middleName" required>
+            <label for="dob">Date of Birth</label>
+			<input type="date" id="dob" name="dob" required>
+
+			<label for="address1">Address Line 1</label>
+			<input type="text" id="address1" name="address1" required>
+
+			<label for="address2">Address Line 2</label>
+			<input type="text" id="address2" name="address2">
+
+			<label for="city">City</label>
+			<input type="text" id="city" name="city" required>
+
+			<label for="state">State</label>
+			<input type="text" id="state" name="state" required>
+
+			<label for="country">Country</label>
+			<input type="text" id="country" name="country" required>
+
+			<button type="submit">Save</button>
+		</form>
+	</div>
+
+	<script>
+		// JavaScript for opening the form when Personal Information is clicked
+		var personalInfo = document.querySelector(".sidebar ul li:first-child");
+		var form = document.querySelector(".form");
+
+		personalInfo.addEventListener("click", function() {
+			form.style.display = "block";
+		});
+
+		// JavaScript for submitting the form
+		var submitButton = document.querySelector(".form button");
+
+		submitButton.addEventListener("click", function(event) {
+			event.preventDefault();
+
+			var firstName = document.querySelector("#firstName").value;
+			var lastName = document.querySelector("#lastName").value;
+			var middleName = document.querySelector("#middleName").value;
+			var dob = document.querySelector("#dob").value;
+			var address1 = document.querySelector("#address1").value;
+			var address2 = document.querySelector("#address2").value;
+			var city = document.querySelector("#city").value;
+			var state = document.querySelector("#state").value;
+			var country = document.querySelector("#country").value;
+
+			// You can do something with the form data here, like save it to a database or display it on the page
+			console.log(firstName, lastName, middleName, dob, address1, address2, city, state, country);
+
+			// Hide the form
+			form.style.display = "none";
+		});
+	</script>
+</body>
+</html>
+
