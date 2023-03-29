@@ -41,7 +41,7 @@ def create_db_connection():
     #     return cnx
     # except Exception as e:
     #     print("error while connecting to database:", e)
-    
+    #
        
 
 # registration API
