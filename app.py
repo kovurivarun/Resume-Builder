@@ -68,3 +68,7 @@ def register():
     cnx.commit()
     cnx.close()
     return jsonify({'status': 201, 'success': 'False','message': 'User registered successfully'})
+if __name__=='__main__':
+    app.run(debug=True,port=5000)
+
+
