@@ -193,7 +193,7 @@ form .fields .input-field{
     margin-left:20rem;
     height: 2.75rem;
     width:7rem;
-    background-color: aliceblue;
+    background-color: rgb(183, 214, 242);
     border-style: none;
     border-radius:1.5rem ;
     
@@ -201,7 +201,7 @@ form .fields .input-field{
 
 form button:hover{
     
-    background-color:aliceblue;
+    background-color:aliceblue; 
     border: none;
 }
 

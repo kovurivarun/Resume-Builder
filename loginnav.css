@@ -2,7 +2,7 @@
 *{
     box-sizing: border-box;
     margin:0;
-    /* padding: 0; */
+    padding: 0;
 }
 html{
     font-size: 10px;
@@ -17,12 +17,14 @@ li{
 }
 header{ 
      /* background-color: #ffffff;  */
-     background-color: #ffffff;
+     /* background-color: #ffffff; */
      /* background-color: antiquewhite; */
-    height: 4.5rem;
-    position:fixed;
+    height: 4rem;
+    
+    /* position:fixed; */
+    width:100%;
     z-index: 1;
-    width:100%
+    
     /* display: inline;
     width: 100rem; */
 }
@@ -33,6 +35,7 @@ header .container{
     width: 90%;
     height: 100%;
     margin: auto; 
+    position: sticky;
 }
 header .logo{
    height: 50px; 

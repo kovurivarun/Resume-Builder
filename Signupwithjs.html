@@ -24,24 +24,23 @@
           </nav> 
         </div>   
     </header> 
-<body>
 	<main>
 	<section>
 		<div class="container1">
 			<span class="title"><h2>Sign Up</h2></span>
-      <form action="./loginpage.html" method="post" id="signup-form" onsubmit="return validateForm()">
+      <form action="loginpage.html" method="post" id="signup-form" onsubmit="return onSubmitForm()">
 				<div class="details">
 					<div class="form first">
 					    <div class="fields">
                            
                               <div class="input-field">
-                                <label for="first-name">First Name:</label>
-                                <input type="text" id="first-name" name="first-name" required>
+                                <label for="firstname">First Name:</label>
+                                <input type="text" id="firstname"onkeyup="manage(this)" name="firstname"minlength="3"maxlength="20" required>
                               </div>
-                              
+
                               <div class="input-field">
-                                <label for="last-name">Last Name:</label>
-                                <input type="text" id="last-name" name="last-name" required>
+                                <label for="lastname">Last Name:</label>
+                                <input type="text" id="lastname"onkeyup="manage(this)" name="lastname"minlength="3"maxlength="20" required>
                               </div>
 
                               <div class="input-field">
@@ -57,37 +56,38 @@
 
                               <div class="input-field">
                                 <label for="dob">Date of Birth:</label>
-                                <input type="date" id="dob" name="dob" required>
+                                <input type="date" id="dob"onkeyup="manage(this)" name="dob" required>
                               </div>
 
                               <div class="input-field">
                                 <label for="email">Email:</label>
-                                <input type="text" id="email" name="email" required>
-                                <p id="error-message"></p>
+                                <input type="text" id="email"onkeyup="manage(this)" name="email" required>
+                                <!-- <p id="error-message"></p> -->
                               </div>
 
                               <div class="input-field">
                                 <label for="phone">Phone Number:</label>
-                                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                                <input type="tel" id="phone"onkeyup="manage(this)" name="phone" pattern="[0-9]{10}" required>
                               </div>
 
                               <div class="input-field">
                                 <label for="password">Password:</label>
-                                <input type="password" id="password" name="password" minlength="8"maxlength="20" 
+                                <input type="password" id="password"onkeyup="manage(this)" name="password" minlength="8"maxlength="20" 
 								                required
 								                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                                 title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number">
                               </div>
 
                               <div class="input-field">
-                                <label for="confirm-password">Confirm Password:</label>
-                                <input type="password" id="confirm-password" name="confirm-password" minlength="8" required>
+                                <label for="confirmpassword">Confirm Password:</label>
+                                <input type="password" id="confirmpassword"onkeyup="manage(this)" name="confirmpassword" minlength="8" required>
                               </div>
 
                               <div class="ss">
-		                            <a href="#"><button id="but" type="button">Security Question</button></a>
+		                            <a href="./securityquestion.html"><button id="but" type="button" required>Security Question</button></a>
                                 <button id="sub"type="submit">Sign Up</button>
                               </div>
+                              <p id="error-message"></p>
                               
 						</div>
 					</div>
@@ -96,6 +96,7 @@
 	  </div>
 	</section>
 	</main>
+
   
 <footer>
   <section style="background-color: black;color: white;height:30%"class="container3">
