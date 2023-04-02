@@ -1,12 +1,22 @@
-function validate(){
-    var username=document.getElementById("uname");
-    var password=document.getElementById("pass");
-    if(username.value=="" || username.password==""){
+const validate = async () => {
+    var username=document.getElementById("uname").value;
+    var password=document.getElementById("pass").value;
+    if(username === "" ||password === ""){
         alert("No blanks are allowed");
-        return false;
     }
     else{
-        true;
-
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+          });
+        
+          const data = await response.json();
+          console.log(data);
+          if (data.success) {
+            window.location.href = 'mainpage.html';
+          } 
     }
 }
