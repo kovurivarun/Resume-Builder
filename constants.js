@@ -1,4 +1,18 @@
-const baseUrl = "http://localhost:5501";
-const ApiUrls = {
-  LOGIN: `${baseUrl}/login`
-};
+const baseUrl = "http://localhost:5000";
+
+window.config = {
+  ApiUrls: {
+    LOGIN: `${baseUrl}/login`,
+    SIGNUP: `${baseUrl}/signup`
+  },
+  
+  AppRoutes: {
+    SIGNUP: '/signup.html',
+  },
+
+  HTTP_METHODS: {
+    POST: 'POST',
+    GET: 'GET'
+  }
+
+}
