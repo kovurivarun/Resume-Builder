@@ -21,41 +21,34 @@
 //     }
 // }
 
-const baseUrl = "http://localhost:5501";
-const ApiUrls = {
-
-  LOGIN: `${baseUrl}/login`
-  
-  };
 
 
+const form = document.getElementById("login"); ̰
+const txtemail = form.querySelector("[name='email']");
+const txtpassword = form.querySelector("[name='Password']");
 
-const form=document.getElementById("login");
-const txtemail =form.querySelector("[name='email']");
-const txtpassword =form.querySelector("[name='Password']");
 form.addEventListener("submit",function(event){
   event.preventDefault();
   const email = txtemail.value;
   const password = txtpassword.value;
-  const payload={
-    email,password
+  const payload = {
+    email, 
+    password
   };
+  
   alert(email + " " + password);
-  window.fetch(
-    window.fetch(ApiUrls.LOGIN,
-    {method : "Post" ,body: JSON.stringify(payload)}
-  ))
-  .then((response) => {
-   if(response.status==true){
-     
+
+  window.fetch(ApiUrls.LOGIN,
+    { 
+      method: "Post",
+      body: JSON.stringify(payload)
+    }
+  ).then((response) => {
+   if (response.status == true) {
      alert("login successfully")
      console.log(response);
-     windows.location.href="Signupwithjs.html";
-      
+     windows.location.href="Signupwithjs.html"; 
     }
-
- 
-
   })
   
   .catch((error ) =>{
