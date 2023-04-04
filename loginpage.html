@@ -21,8 +21,8 @@
           <nav>
             <ul>
                 <li><a href="./loginpage.html">Log in</a></li>
-                <li><a href="./Signup.html"target="_blank">Sign up</a></li>
-                <li>About Us</li>
+                <li><a href="./Signupwithjs.html"target="_blank">Sign up</a></li>
+                <li><a href="./Aboutus.html">About Us</a></li>
             </ul>
           </nav> 
         </div>   
@@ -31,17 +31,18 @@
 
  <main>
     <section class="banner">
-     <form onsubmit="return validate()" action="./mainpage.html" class="form">
+     <form id="login">
        <h1>LOGIN</h1>
        <input type="text" id="uname" name="email" class="box" placeholder="Enter Email" required>
 
-       <input type="password"id="pass" name="Password" class="box" placeholder="Enter Password" minlength="8" maxlength="20" required
+       <input type="password" id="pass" name="Password" class="box" placeholder="Enter Password" minlength="8" maxlength="20" required
        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
        title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number">
 
-        <input type="submit" value="LOGIN" id="submit">
-       <a href="./forgotpassword.html"><p class="mssg ">Forgot password?</p></a>
-       <p class="mssg1">Not a member? <a href="./Signup.html"target="_blank">Sign-up</a></p>
+        <!-- <button type="submit"  id="submit"> -->
+            <button type = "submit"> Login </button>
+       <a href="./securityquestion.html"><p class="mssg ">Forgot password?</p></a>
+       <p class="mssg1">Not a member? <a href="Signupwithjs.html"target="_blank">Sign-up</a></p>
      </form>
     </section>
  </main>
@@ -55,6 +56,7 @@
                 <li>Chat Hours:</li>
                 <li>mobile number: 9390092899</li>
                 <li>Monday-Friday 9am-6pm</li>
+                <li> <i id="copyright" class="fa-solid fa-copyright"></i><p>2023 Resume Builder</p></li>
             </ul>
         </div>
         <div class="social">

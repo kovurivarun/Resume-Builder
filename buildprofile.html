@@ -1,0 +1,581 @@
+<html>
+
+<head>
+	<title>Build Profile</title>
+	<link rel="stylesheet" href="buildprofile.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<!--  jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+	<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+	<script src="buildprofile.js"></script>
+	<!-- Bootstrap Date-Picker Plugin -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Resume Builder</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+				aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Build Profile</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Design Resume</a>
+					</li>
+				</ul>
+				<span class="navbar-text">
+					<p id="userName">user</p>
+				</span>
+			</div>
+		</div>
+	</nav>
+	<div class="container" style="margin-top: 40px;">
+		<div class="accordion" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						Personal Information
+					</button>
+				</h2>
+				<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="container">
+							<div class="row g-3">
+								<div class="col-md-6">
+									<label for="firstName" class="form-label">First Name</label>
+									<input type="text"name="firstName" class="form-control" id="firstName"/>
+								</div>
+								<div class = "col-md-6">
+									<label for="lastName" class="form-label">Last Name</label>
+									<input type="text"name="lastName" class="form-control" id="lastName">
+								</div>
+								<div class="form-group"> <!-- Date input -->
+									<label class="control-label" for="date">Date of birth</label>
+									<input class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder="MM/DD/YYY"
+										type="date" />
+								</div>
+								<div class="col-12">
+									<label for="Address" class="form-label">Address</label>
+									<textarea class="form-control"name="Address" id="Address" rows="3"></textarea>
+								</div>
+								<div class="col-md-6">
+									<label for="City" class="form-label">City</label>
+									<input type="text"name="city" class="form-control" id="city">
+								</div>
+								<div class="col-md-6">
+									<label for="state"name="state" class="form-label">State</label>
+									<input type="text" class="form-control" id="state">
+								</div>
+								<div class="col-md-2">
+									<label for="pincode" class="form-label">Pin Code</label>
+									<input type="text"name="pincode" class="form-control" id="pincode">
+								</div>
+								<div class="col-12">
+									<button id="personalDataBtn" class="btn btn-primary">Submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						Contact Information
+					</button>
+				</h2>
+				<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div>
+							<div class="mb-3">
+								<label for="email" class="form-label">Email address</label>
+								<input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
+							</div>
+							<div class="mb-3">
+								<label for="phoneNumber" class="form-label">Phone Number</label>
+								<input type="text" name="phoneNumber"class="form-control" id="phoneNumber"
+									placeholder="Enter Phone Number">
+							</div>
+							<div class="mb-3">
+								<label for="alternateNumber" class="form-label">Alternate Number</label>
+								<input type="text" name="alternateNumber"class="form-control" id="alternateNumber"
+									placeholder="Enter Alternate Number">
+							</div>
+							<div class="mb-3">
+								<label for="linkdinURL" class="form-label">Linkdin URL</label>
+								<input type="text" name="linkdin" class="form-control" id="linkdin" placeholder="Enter Linkdin URL">
+							</div>
+							<button class="btn btn-primary" id="contactInfo">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						Work Expirence
+					</button>
+				</h2>
+				<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body" id="company">
+						<div class="container">
+
+						</div>
+					</div>
+					<div class="container " style="margin:0px 0px 10px 17px;">
+						<button class="btn btn-primary" style="margin-top: 10px;" id="addCompany">Add</button>
+						<button class="btn btn-primary" style="margin-top: 10px;" id="Company">Submit</button>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+						Skills
+					</button>
+				</h2>
+				<div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="skills" id="skills">
+
+							
+						</div>
+						<button class="btn btn-primary" id="addSkills" style="margin-top: 10px;">Add</button>
+						<button class="btn btn-primary" style="margin-top: 10px;" id="skillSubmit">Submit</button>
+					</div>
+
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+						Education
+					</button>
+				</h2>
+				<div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<h2>Education</h2>
+						<div class="skills" id="Education">
+							<div class="container my-3">
+								<div class="mb-3">
+									<label class="form-label">School Name</label>
+									<input type="text" class="form-control" id="schoolName1"
+										placeholder="Enter School Name">
+								</div>
+								<label for="exampleInputEmail1" class="form-label">Education Qualification</label>
+								<select class="form-select" aria-label="Default select example" id="educationSelect1">
+									<option value="secondary">Secondary/CBSC/ICSE</option>
+									<option value="intermediate">Intermediate</option>
+									<option value="bachelors">Bachelors</option>
+									<option value="diploma">Diploma</option>
+									<option value="masters">Masters</option>
+								</select>
+								<div class="mb-3">
+									<label style="margin-top: 10px;" class="form-label">CGPA</label>
+									<input type="number" class="form-control" id="cgpa1" placeholder="Enter Cgpa">
+								</div>
+								<!-- <div class="mb-3">
+								<label   class="form-label">Specialization</label>
+								<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Specialization">
+							</div> -->
+								<div class="mb-3">
+									<label class="form-label">Passing Year</label>
+									<input type="number" class="form-control" id="passingYear1"
+										placeholder="Enter Passing Year">
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-primary" id="addEducation" style="margin-top: 10px;">Add</button>
+						<button class="btn btn-primary" id="EducationSubmit" style="margin-top: 10px;">Submit</button>
+					</div>
+
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseTwo">
+						Projects
+					</button>
+				</h2>
+				<div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="skills" id="project">
+						</div>
+						<button class="btn btn-primary" id="addProject" style="margin-top: 10px;">Add</button>
+						<button class="btn btn-primary" id="projectsSubmit" style="margin-top: 10px;">Submit</button>
+					</div>
+
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseTwo">
+						Certifications
+					</button>
+				</h2>
+				<div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="skills" id="Certicate">
+						</div>
+						<button class="btn btn-primary" id="addCertificate" style="margin-top: 10px;">Add</button>
+						<button class="btn btn-primary" id="certificateSubmit" style="margin-top: 10px;">Submit</button>
+					</div>
+
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseTwo">
+						Hobbies
+					</button>
+				</h2>
+				<div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="skills" id="Hobbies">
+
+						</div>
+						<button class="btn btn-primary" id="addHobby" style="margin-top: 10px;">Add</button>
+						<button class="btn btn-primary" id="hobbiesSubmit" style="margin-top: 10px;">Submit</button>
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+		crossorigin="anonymous"></script>
+	<script>
+		let company = document.getElementById('company');
+		let addbtn = document.getElementById('addCompany')
+		const addEvent = () => {
+			let newDiv = document.createElement('div');
+			let curValue = 1;
+			if (company.lastElementChild.lastElementChild !== null) {
+				let cur = company.lastElementChild.lastElementChild.getElementsByTagName('input')[0].attributes.id
+				curValue = Number.parseInt(cur) + 1;
+
+			}
+			newDiv.class = 'container my-3'
+			newDiv.innerHTML = `
+    						<h2>Company</h2>
+							<div class="mb-3">
+								<label   class="form-label">Company Name</label>
+								<input type="text"name="companyName" class="form-control" id="companyName" placeholder="Enter Company Name">
+							</div>
+							<div class="mb-3">
+								<label   class="form-label">Position</label>
+								<input type="text"name="position" class="form-control" id="position" placeholder="Enter Position you Worked for">
+							</div>
+							<div class="form-group"> <!-- Date input -->
+								<label class="control-label" for="date">Start Date</label>
+								<input class="form-control" id="startDate" name="date" placeholder="MM/DD/YYY" type="date"/>
+							  </div>
+							  <div class="mb-3" style="margin-top: 10px;">
+								<label for="inputState"name="currentJob" class="form-label">Current Job</label>
+								<select id="experience" class="form-select">
+								  <option selected>Yes</option>
+								  <option>No</option>
+								</select>
+							  </div>
+							<div class="form-group"> <!-- Date input -->
+								<label class="control-label" for="date">End Date</label>
+								<input class="form-control" id="endDate" name="endDate" placeholder="MM/DD/YYY" type="date"/>
+							</div>
+    `
+			company.appendChild(newDiv)
+			document.getElementById('companyName').setAttribute("id",'companyName'+(company.childNodes.length-3 ))
+			document.getElementById('position').setAttribute("id",'position'+(company.childNodes.length-3 ))
+			document.getElementById('startDate').setAttribute("id",'startDate'+(company.childNodes.length-3 ))
+			document.getElementById('experience').setAttribute("id",'experience'+(company.childNodes.length-3 ))
+			document.getElementById('endDate').setAttribute("id",'endDate'+(company.childNodes.length-3 ))
+			// console.log(company.childNodes);
+			// console.log(company.lastElementChild.childNodes);
+		}
+		addbtn.addEventListener('click', addEvent)
+		let skills = document.getElementById('skills')
+		let add = document.getElementById('addSkills')
+		let addEducation = document.getElementById('addEducation');
+
+		const addEduc = () => {
+			let newDiv = document.createElement('div')
+			newDiv.class = 'container my-3'
+			newDiv.innerHTML =
+				`
+	<div class="container my-3">
+							<h2>Education</h2>
+							<div class="mb-3">
+								<label class="form-label">School Name</label>
+								<input type="text"name="schoolName" class="form-control" id="schoolName" placeholder="Enter School Name">
+							</div>
+							<label for="exampleInputEmail1" class="form-label">Education Qualification</label>
+							<select class="form-select"name="qualification" aria-label="Default select example" id="educationSelect">
+								<option value="secondary"name="secondary">Secondary/CBSC/ICSE</option>
+								<option value="intermediate"name="inter">Intermediate</option>
+								<option value="bachelors"name="bachelor">Bachelors</option>
+								<option value="diploma"name="diploma">Diploma</option>
+								<option value="masters"name="masters">Masters</option>
+							</select>
+							<div class="mb-3">
+								<label  style="margin-top: 10px;" class="form-label">CGPA</label>
+								<input type="number"name="cgpa" class="form-control" id="cgpa" placeholder="Enter Cgpa">
+							</div>
+							<div class="mb-3">
+								<label   class="form-label">Passing Year</label>
+								<input type="number"name="passingYear" class="form-control" id="passingYear" placeholder="Enter Passing Year">
+							</div>
+						</div>
+	`
+			document.getElementById('Education').appendChild(newDiv)
+			let cur = document.getElementById('Education').childNodes.length - 2;
+			document.getElementById('schoolName').setAttribute("id","schoolName" + cur)
+			document.getElementById('educationSelect').setAttribute("id","educationSelect" + cur)
+			document.getElementById('cgpa').setAttribute("id","cgpa" + cur)
+			document.getElementById('passingYear').setAttribute("id","passingYear" + cur)
+		}
+		addEducation.addEventListener('click', addEduc)
+
+		const addSkill = () => {
+			let newDiv = document.createElement('div');
+			newDiv.class = 'container my-3'
+			newDiv.innerHTML =
+				`
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Skill Name</label>
+    <input type="text"name="skillName" class="form-control" id="skillName" aria-describedby="emailHelp">
+</div>
+<label for="exampleInputEmail1" class="form-label">Level</label>
+<select class="form-select"name="skillLevel"id="skillLevel" aria-label="Default select example">
+    <option value="beginner"name="beginner">Beginner</option>
+    <option value="intermediate"name="intermediate">Intermediate</option>
+    <option value="advanced"name="advanced">Advanced</option>
+</select>
+    `		
+			skills.appendChild(newDiv)
+			let cur = skills.childNodes.length - 1
+			document.getElementById('skillName').setAttribute("id","skillName"+cur)
+			document.getElementById('skillLevel').setAttribute("id","skillLevel"+cur)
+		}
+		add.addEventListener('click', addSkill)
+		const addPro = () => {
+			let newDiv = document.createElement('div')
+			newDiv.class = 'container'
+			newDiv.innerHTML =
+				`
+		<h2>Project</h2>
+							<div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Project Name</label>
+								<input type="text"name="Projectname" class="form-control" id="projectName" aria-describedby="emailHelp">
+							</div>
+							<div class="col-12">
+								<label for="inputAddress" class="form-label">Project Description</label>
+								<textarea class="form-control"name="projectDescription" id="projectDescription" rows="3"></textarea>
+							  </div>
+							  <div class="mb-3">
+								<label  style="margin-top: 10px;" class="form-label">Implementation Year</label>
+								<input type="number" class="form-control"name="ImplementationYear" id="implementationYear" placeholder="Implementation Year">
+							</div>
+		`
+			document.getElementById('project').appendChild(newDiv)
+			let cur = document.getElementById('project').childNodes.length - 1
+			document.getElementById('projectName').setAttribute("id","projectName"+cur);
+			document.getElementById('projectDescription').setAttribute("id","projectDescription"+cur);
+			document.getElementById('implementationYear').setAttribute("id","implementationYear"+cur);
+
+		}
+		let addProject = document.getElementById('addProject')
+		addProject.addEventListener('click', addPro)
+
+		const addCert = () => {
+			let newDiv = document.createElement('div')
+			newDiv.class = 'my-3'
+			newDiv.innerHTML =
+				`
+		<h2>Certification</h2>
+							<div class="mb-3">
+								<label   class="form-label">Certification</label>
+								<input type="text"name="Certification" class="form-control" id="certificationName" placeholder="Certification Name">
+							</div>
+							  <div class="mb-3">
+								<label class="form-label">Issued By</label>
+								<input type="text"name="issued_by" class="form-control" id="issuedBy" placeholder="Issued By">
+							  </div>
+							  <div class="mb-3">
+								<label class="form-label">Certification Id</label>
+								<input type="number"name="Certification_id" class="form-control" id="certificationId" placeholder="Certification Id">
+							  </div>
+		`
+			document.getElementById('Certicate').appendChild(newDiv)
+			let cur = document.getElementById('Certicate').childNodes.length - 1;
+			document.getElementById('certificationName').setAttribute("id","certificationName"+cur);
+			document.getElementById('issuedBy').setAttribute("id","issuedBy"+cur);
+			document.getElementById('certificationId').setAttribute("id","certificationId"+cur);
+		}
+		document.getElementById('addCertificate').addEventListener('click', addCert)
+
+		const addHobbie = () => {
+			let newDiv = document.createElement('div')
+			newDiv.class = 'container my-3'
+			newDiv.innerHTML =
+				`
+		<div class="mb-3">
+								<label   style="margin-top: 10px;" class="form-label">Hobbies</label>
+								<input type="text" class="form-control"name="hobbies" id="addHobby" placeholder="Hobbies">
+							</div>
+		`
+			document.getElementById('Hobbies').appendChild(newDiv)
+			let cur = document.getElementById('Hobbies').childNodes.length -1 ;
+			document.getElementById("addHobby").setAttribute("id","hobbies"+cur)
+		}
+
+		document.getElementById('addHobby').addEventListener('click', addHobbie)
+
+
+		let personalInfo=document.getElementById("personalDataBtn")
+		let contactInfo=document.getElementById("contactInfo")
+		let companyInfo=document.getElementById("Company")
+		let skillInfo=document.getElementById("skillSubmit")
+		let educationInfo=document.getElementById("EducationSubmit")
+		let projectsInfo=document.getElementById("projectsSubmit")
+		let certificationInfo=document.getElementById("certificateSubmit")
+		let hobbiesInfo=document.getElementById("hobbiesSubmit")
+
+		const setPersonalInfo = () => {
+			const personalInfoData = {
+				firstName : document.getElementById('firstName').value,
+				lastName : document.getElementById('lastName').value,
+				address : document.getElementById('Address').value,
+				dateOfBirth : document.getElementById('dateOfBirth').value,
+				city : document.getElementById('city').value,
+				state : document.getElementById('state').value,
+				pincode : document.getElementById('pincode').value
+
+			}
+			console.log(personalInfoData);
+		}
+		personalInfo.addEventListener('click',setPersonalInfo);
+
+		const setContactInfo =() => {
+			const contactInfoData = {
+				email : document.getElementById('email').value,
+				phoneNumber : document.getElementById('phoneNumber').value,
+				alternateNumber : document.getElementById('alternateNumber').value,
+				linkdin : document.getElementById('linkdin').value
+			}
+			console.log(contactInfoData);
+		}
+		contactInfo.addEventListener('click',setContactInfo);
+
+		const setWorkExpirenceInfo =() => {
+			const setworkExpirenceInfoData = [];
+			for (let index = 1; index < company.childNodes.length-2; index++) {		
+				const workExpirenceInfo = {
+					companyName : document.getElementById('companyName'+index).value,
+					position : document.getElementById('position'+index).value,
+					startDate : document.getElementById('startDate'+index).value,
+					experience : document.getElementById('experience'+index).options[document.getElementById('experience'+index).selectedIndex].value,
+					endDate : document.getElementById('endDate'+index).value
+				}
+				setworkExpirenceInfoData.push(workExpirenceInfo);
+			}
+			console.log(setworkExpirenceInfoData);
+		}
+
+		companyInfo.addEventListener('click',setWorkExpirenceInfo);
+
+
+		const setSkillInfo =() => {
+			const setskillInfoData = [];
+			for (let index = 1; index < skills.childNodes.length; index++) {
+				const skillInfoData = {
+					skillName : document.getElementById('skillName'+index).value,
+					skillLevel : document.getElementById('skillLevel'+index).options[document.getElementById('skillLevel'+index).selectedIndex].value
+				}
+				setskillInfoData.push(skillInfoData)
+			}
+			console.log(setskillInfoData);
+		}
+		skillInfo.addEventListener('click',setSkillInfo);
+
+		const setEducationInfo =() => {
+			const seteducationInfoData = [];
+			for (let index = 1; index < document.getElementById('Education').childNodes.length - 1; index++) {
+				console.log(index);
+				const educationInfoData = {
+					schoolName : document.getElementById('schoolName'+index).value,
+					educationSelect : document.getElementById('educationSelect'+index).options[document.getElementById('educationSelect'+index).selectedIndex].value,
+					cgpa : document.getElementById('cgpa'+index).value,
+					passingYear : document.getElementById('passingYear'+index).value
+				}
+				seteducationInfoData.push(educationInfoData)
+			}
+			console.log(seteducationInfoData);
+		}
+		educationInfo.addEventListener('click',setEducationInfo);
+
+		const setProjectInfo =() => {
+			const setprojectInfoData = []
+			for (let index = 1; index <= document.getElementById('Certicate').childNodes.length; index++) {	
+				const projectInfoData = {
+					projectName : document.getElementById('projectName'+index).value,
+					projectDescription : document.getElementById('projectDescription'+index).value,
+					implementationYear : document.getElementById('implementationYear'+index).value
+				}
+				setprojectInfoData.push(projectInfoData);
+			}
+			console.log(setprojectInfoData);
+		}
+		projectsInfo.addEventListener('click',setProjectInfo);
+
+		const setCertificationInfo =() => {
+			const setcertificationInfoData = [];
+			for (let index = 1; index < document.getElementById('Certicate').childNodes.length; index++) {
+				const certificationInfoData = {
+					certificationName : document.getElementById('certificationName'+index).value,
+					issuedBy : document.getElementById('issuedBy'+index).value,
+					certificationId : document.getElementById('certificationId'+index).value
+				}
+				setcertificationInfoData.push(certificationInfoData);
+			}
+			console.log(setcertificationInfoData);
+		}
+		certificationInfo.addEventListener('click',setCertificationInfo);
+
+		const setHobbiesInfo =() => {
+			const sethobbiesInfoData = [];
+			console.log();
+			for (let index = 1; index < document.getElementById('Hobbies').childNodes.length; index++) {			
+				const hobbiesInfoData = {
+					addHobby : document.getElementById('hobbies'+index).value
+				}
+				sethobbiesInfoData.push(hobbiesInfoData);
+			}
+			console.log(sethobbiesInfoData);
+		}
+		hobbiesInfo.addEventListener('click',setHobbiesInfo);
+
+
+	</script>
+</body>
+
+</html>
