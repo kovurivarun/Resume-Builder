@@ -13,7 +13,6 @@ form.addEventListener("submit", function (event) {
   };
   alert(email + " " + password);
   window.fetch(window?.config?.ApiUrls?.LOGIN, {
-
     method: "POST",
 
     body: JSON.stringify(payload),
