@@ -53,9 +53,8 @@ form.addEventListener("submit",function(event){
      windows.location.href = window?.config?.AppRoutes?.SIGNUP;
     }
   })
-  
-  .catch((error ) =>{
-    alert(error);
+    .catch((error ) =>{
+    alert(payload);
   });
 });
 // form.addEventListener("submit", function (event) {
