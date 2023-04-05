@@ -12,7 +12,6 @@ form.addEventListener("submit", function (event) {
     password
   };
   alert(email + " " + password);
-
   window.fetch(window?.config?.ApiUrls?.LOGIN, {
 
     method: "POST",
