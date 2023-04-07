@@ -1,0 +1,58 @@
+<html>
+    <head>
+		<title>Build Profile</title>
+		<link rel="stylesheet" href="buildprofile.css">
+        <!--  jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	</head>
+    <body>
+        <div class="skills" id="skills">
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Skill</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <label for="exampleInputEmail1" class="form-label">Select Level</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+            <button class="btn btn-primary" id="addSkills" style="margin-top: 10px;">Add</button>
+        </body>
+        <script>
+            let skills = document.getElementById('skills')
+            let add = document.getElementById('addSkills')
+            const addSkill = ()=>{
+                let newDiv = document.createElement('div');
+                newDiv.class = 'container'
+                newDiv.innerHTML = 
+                `
+                <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <label for="exampleInputEmail1" class="form-label">Skill</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+                `
+                skills.appendChild(newDiv)
+            }
+            add.addEventListener('click',addSkill)
+        </script>
+</html>

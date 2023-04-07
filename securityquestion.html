@@ -4,49 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
-     <!-- <link rel="stylesheet" href="loginpage.css">  -->
-     <script src="https://kit.fontawesome.com/e95cfce662.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="loginnav.css">
+    <link rel="stylesheet" href="securityquestion.css">
+    <script src="https://kit.fontawesome.com/e95cfce662.js" crossorigin="anonymous"></script>
+    <title>Security Question</title>
 </head>
-<!-- <div class="frst"> -->
-    <body>
-        
-    <!-- </body> -->
+  <body>
     <header>
         <div class="container">
-            <div>
-                <a href="index.html"> <p class="logo">Resume Builder</p></a>
-            </div>
-          <nav>
-            <ul>
+          <div>
+           <a href="index.html"> <p class="logo">Resume Builder</p></a>
+          </div>   
+            <nav>
+               <ul>
                 <li><a href="./loginpage.html">Log in</a></li>
                 <li><a href="./Signupwithjs.html"target="_blank">Sign up</a></li>
-                <li><a href="./Aboutus.html">About Us</a></li>
-            </ul>
-          </nav> 
-        </div>   
+                <li>About Us</li>
+               </ul>
+            </nav> 
+         </div>
     </header> 
-
-
- <main>
-    <section class="banner">
-     <form id="login">
-       <h1>LOGIN</h1>
-       <input type="text" id="uname" name="email" class="box" placeholder="Enter Email" required>
-
-       <input type="password" id="pass" name="Password" class="box" placeholder="Enter Password" minlength="8" maxlength="20" required
-       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-       title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number">
-
-        <!-- <button type="submit"  id="submit"> -->
-            <button type = "submit"><a href="./mainpage.html">Login</a> </button>
-       <a href="./securityquestion.html"><p class="mssg ">Forgot password?</p></a>
-       <p class="mssg1">Not a member? <a href="Signupwithjs.html"target="_blank">Sign-up</a></p>
-     </form>
-    </section>
- </main>
- <footer>
+    
+  
+  <main>
+    <div class="container1">
+        <div class="section">
+           
+            <form action="./loginpage.html" method="post"  id="securityquestion">
+              <h2>Security Question</h2>
+                <p>What is your favourite type of food?</p>
+                <div class="input-field">
+                    <select id="security" name="security" required>
+                    <option value="FavouriteFood" name="FavouriteFood">Favourite Cuisine?</option>
+                    <option value="indian"name="indian">Indian</option>
+                    <option value="italian"name="italian">Italian</option>
+                    <option value="mexican"name="mexican">Mexican</option>
+                    <option value="chinese"name="chinese">Chinese</option>
+                    </select>
+                </div>
+                <!-- <div class="Sbutton"> -->
+                <span><button id="submit" type="submit">Submit</button></span>
+              <!-- </div> -->
+            </form>
+        </div>
+    </div>
+  </main>
+  <footer>
     <section class="container">
         <div class="foot">
             <h3>Resume Builder</h3>
@@ -76,12 +78,8 @@
                     <li>Job Search</li>
                 </ul>
             </div>
-        </div>
-    </section>
   </footer>
-
- <script src="./constants.js"></script>
- <script src="./loginpagescript.js"></script>
+  
+  
 </body>
-
 </html>

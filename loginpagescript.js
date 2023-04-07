@@ -36,11 +36,19 @@ form.addEventListener("submit", function (event) {
       windows.location.href = window?.config?.AppRoutes?.SIGNUP;
 
     }
+    else{
+      alert("login failed")
+      // form.querySelector("[name='email']").value="varun"
+      // form.querySelector("[name='Password']").value="vaasdf123"
+      windows.location.href = window?.config?.AppRoutes?.LOGIN;
+    }
 
   })
 
     .catch((error) => {
       console.log(error);
+      // form.querySelector("[name='email']").value="varun"
+      // form.querySelector("[name='Password']").value="vaasdf123"
       alert(JSON.stringify(payload));
 
     });
