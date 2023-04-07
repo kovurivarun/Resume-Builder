@@ -73,12 +73,14 @@ header nav ul li a:hover{
     color: #ffffff;
 }
 section{
-    height: 120vh;
+    height: 110vh;
     display: flex;
     align-items: center ;
     justify-content: center;
     /* background-color: rgb(108, 173, 177); */
     background-color: #434343;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtgSE1m3SQ90VaxKOr5K_3RLjoOWasS9eEDP80aNJUZ0Pn6fiHF54mwvmIRoEE59LlbVvOHkqli9c&usqp=CAU&ec=48600112);
+    background-size: cover;
     
     
     
@@ -150,8 +152,8 @@ form .fields .input-field{
     border-radius: 5px;
     border:1px solid#aaa;
     padding:0 10px;
-    height: 30px;
-    margin:1.5rem 0;
+    height: 25px;
+    margin:1.2rem 0;
 }
 .input-field #gender{
     height: 30px; 
@@ -187,9 +189,12 @@ form .fields .input-field{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin:1rem;
+    margin: 1rem;
     /* padding: 1rem; */
     
+}
+#secAns{
+    margin-right: 9.7rem;
 }
 #but{
     height: 2.75rem;

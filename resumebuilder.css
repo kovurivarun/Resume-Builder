@@ -19,14 +19,11 @@ li{
      list-style: none; 
 }
 header{
-    /* background-color: #ffffff; */
     background-color: #ffffff;
     height: 6rem;
     position: fixed;
     z-index: 1;
     width:100%;
-    
-    /* position: sticky; */
 }
 
 header .container{
@@ -43,10 +40,8 @@ header .logo{
    display: flex;
    align-self: center;
    font-size: 3rem;
-   /* font-style: italic; */
    padding:1rem 1.5rem 2rem 1.5rem ;
    font-weight: 700;
-   /* color: #000000; */
    color: #000000;
 }
 header .logo:hover{
@@ -80,8 +75,8 @@ section.banner{
     background-image: url(./media/bg.jpg);
     background-size: cover;
     flex-direction: column; 
-    justify-content:center; /*changed*/
-    align-items: center;    /*changed*/
+    justify-content:center; 
+    align-items: center;    
 }
 section.banner h1{
     font-size: 9rem;

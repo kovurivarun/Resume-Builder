@@ -191,6 +191,7 @@
 
 
 		let personalInfo=document.getElementById("personalDataBtn")
+
 		let contactInfo=document.getElementById("contactInfo")
 		let companyInfo=document.getElementById("Company")
 		let skillInfo=document.getElementById("skillSubmit")
