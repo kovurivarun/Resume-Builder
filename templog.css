@@ -74,44 +74,90 @@ header nav ul li a:hover{
     background-color: black;
     color: #ffffff;
 } 
-section.banner{
-    height: 100vh;
-    display:flex;
+main{
     background-image: url(./media/bg.jpg);
     background-size: cover;
-    flex-direction: column; 
-    justify-content:center; /*changed*/
-    align-items: center;    /*changed*/
+    background-color: aqua;
+    height: 100vh;
 }
-section.banner h1{
-    font-size: 9rem;
-    line-height: 1;
-    margin-top: 8rem;
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+}
 
-}
-section.banner p{
-    font-size: 3rem;
-    padding:2rem;
-    margin: 2rem 0;
-    text-align: center;
-}
-section.banner button{
-    background-color: #000000;
-    border: none;
-    border-radius:3rem;
-    font-size: 2rem;
+form{
+    display: flex;
+     flex-direction: column;
+    height: 420px;
+    width: 400px;
+    border :1px solid black;
+    align-items: center;
+    margin:auto;
+    margin-top: 15rem;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow :inset -5px -5px(0,0,0,0.5); 
+    border-radius: 25px;
+} 
+form h1{
     color:#ffffff;
-    font-weight: 600;
-    padding: 1.8rem 2.7rem;
-    box-shadow: 0 0 0.4em #514b4d;
-
-
+    font-size: 4rem;
+    border-bottom: 4px solid rgba(255,255,255,0.5);
+    margin: 25px; 
 }
-section.banner button:hover{
+.box{
+    padding:12px;
+    margin:15px;
+    width:60%;
+    border: none;
+    outline: none; 
+    /* border-radius: 20px; */
+     background-color: rgba(0,0,0,0.5);
+    box-shadow: inset -3px -3px rgba(0,0,0,0.5);
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 5px;
+}
+#submit{
+    padding: 10px;
+    margin-top: 15px;
+    width:40%;
+    /* background-color: rgba(0,0,0,0.5); */
+    background-color: rgba(60, 59, 57, 0.324);
+    padding: 12px;
+    color: #ffffff;
+    box-shadow: inset -3px -3px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    font-size: 1.8rem;
+    border:none;
+    outline: none;
+}
+#submit:hover{
     cursor: pointer;
-    transform: scale(105%,105%); /* to increse the size of button  */
+    background-color: rgba(255,255,255,0.1);
 }
+.mssg{
+    color: #ffffff;
+    margin-top:2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.mssg1{
+    color: #ffffff;
+    /* margin-top:1rem; */
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+.mssg1 a{
+    color: white;
+}
+::placeholder{
+    color:#ffffff;
+    opacity:0.7;
+}  
 footer{
     background-color: #000000;
     
@@ -129,9 +175,8 @@ footer h3{
     height: 6rem;
     display: flex;
     padding-top: 1rem;
-    margin-bottom: 11rem;
 }
-footer .contact li{
+ footer .contact li{
     font-size: 1.5rem;
     display: flex;
     flex-wrap: wrap;
@@ -139,6 +184,7 @@ footer .contact li{
     padding:1.3rem;
     justify-content: space-evenly;
 }
+
 footer .social p{
     font-size: 1.5rem;
     display: flex;
@@ -148,9 +194,9 @@ footer .social p{
     justify-content: space-evenly;
 }
 footer .social ul li{
+    color: #ffffff;
     font-size: 2.6rem;
     background-color: #222326;
-    color: #ffffff;
     border-radius: 50%;
     height: 5.5rem;
     width:5.5rem;
@@ -166,5 +212,4 @@ footer .company ul li{
     flex-grow: 2;
     padding:1.3rem;
     justify-content: space-evenly;
-}
-
+}  
