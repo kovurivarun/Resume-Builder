@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="./loginpage.html">Log in</a></li>
                 <li><a href="./Signupwithjs.html"target="_blank">Sign up</a></li>
-                <li>About Us</li>
+                <li><a href="./Aboutus.html">About Us</a></li>
             </ul>
           </nav> 
         </div>   
@@ -28,7 +28,7 @@
 	<section>
 		<div class="container1">
 			<span class="title"><h2>Sign Up</h2></span>
-      <form action="" method="post" id="signup-form" onsubmit="return onSubmitForm()">
+      <form action="/register" method="post" id="signup-form" onsubmit="return onSubmitForm()">
 				<div class="details">
 					<div class="form first">
 					    <div class="fields">
@@ -46,7 +46,7 @@
                               <div class="input-field">
                                 <label for="gender" name="gender">Gender:</label>
                                 <select id="gender" required>
-                                <option value=""name="options">-- Select Gender --</option>
+                                <!-- <option value="options"name="options">-- Select Gender --</option> -->
                                 <option value="male"name="male">Male</option>
                                 <option value="female"name="female">Female</option>
                                 <option value="other"name="other">Other</option>
@@ -82,9 +82,19 @@
                                 <label for="confirmpassword">Confirm Password:</label>
                                 <input type="password" id="confirmpassword"onkeyup="manage(this)" name="confirmpassword" minlength="8" required>
                               </div>
+                              <div class="input-field">
+                                <label for="security" name="security">Security Question:</label>
+                                <select id="security" required>
+                                 <placeholder>Favourite technology?</placeholder>
+
+                                <option value="Indian"name="Indian">Indian</option>
+                                <option value="Italian"name="Italian">Italian</option>
+                                <option value="Mexican"name="Mexican">Mexican</option>
+				                        <option value="Chinese"name="Chinese">Chinese</option>
+                                </select>
+                              </div>
 
                               <div class="ss">
-		                            <a href="./securityquestion.html"><button id="but" type="button" required>Security Question</button></a>
                                 <button id="sub"type="submit">Sign Up</button>
                               </div>
                               <p id="error-message"></p>

@@ -9,8 +9,12 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
 	<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
-	<script src="buildprofile.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+		crossorigin="anonymous"></script>
 	<!-- Bootstrap Date-Picker Plugin -->
+	
+	<script src="buildprofile.js"></script>
 	<script type="text/javascript"
 		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 </head>
@@ -40,6 +44,8 @@
 	</nav>
 	<div class="container" style="margin-top: 40px;">
 		<div class="accordion" id="accordionExample">
+
+		 <div id="frstaccordion">
 			<div class="accordion-item">
 				<h2 class="accordion-header">
 					<button id="perinfoaccbtn" class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -68,26 +74,14 @@
 									<label for="address" class="form-label">Address</label>
 									<textarea class="form-control" name="address" id="address" rows="3"></textarea>
 								</div>
-								<div class="col-md-6">
-									<label for="City" class="form-label">City</label>
-									<input type="text"name="city" class="form-control" id="city">
-								</div>
-								<div class="col-md-6">
-									<label for="state"name="state" class="form-label">State</label>
-									<input type="text" class="form-control" id="state">
-								</div>
-								<div class="col-md-2">
-									<label for="pincode" class="form-label">Pin Code</label>
-									<input type="text"name="pincode" class="form-control" id="pincode">
-								</div>
-								<div class="col-12">
-									<button id="personalDataBtn" class="btn btn-primary">Submit</button>
-								</div>
+								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+	
+	
 			<div class="accordion-item">
 				<h2 class="accordion-header">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -116,16 +110,18 @@
 								<label for="linkdinURL" class="form-label">Linkdin URL</label>
 								<input type="text" name="linkdin" class="form-control" id="linkdin" placeholder="Enter Linkdin URL">
 							</div>
-							<button class="btn btn-primary" id="contactInfo">Submit</button>
+							<!-- <button class="btn btn-primary"name="submitButton" id="contactInfo">Submit</button> -->
 						</div>
 					</div>
 				</div>
 			</div>
+		
+		
 			<div class="accordion-item">
 				<h2 class="accordion-header">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
 						data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-						Work Expirence
+						Work Experience
 					</button>
 				</h2>
 				<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -136,10 +132,12 @@
 					</div>
 					<div class="container " style="margin:0px 0px 10px 17px;">
 						<button class="btn btn-primary" style="margin-top: 10px;" id="addCompany">Add</button>
-						<button class="btn btn-primary" style="margin-top: 10px;" id="Company">Submit</button>
+						<!-- <button class="btn btn-primary"name="companySubmit" style="margin-top: 10px;" id="Company">Submit</button> -->
 					</div>
 				</div>
 			</div>
+	
+		
 			<div class="accordion-item">
 				<h2 class="accordion-header">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -154,11 +152,13 @@
 							
 						</div>
 						<button class="btn btn-primary" id="addSkills" style="margin-top: 10px;">Add</button>
-						<button class="btn btn-primary" style="margin-top: 10px;" id="skillSubmit">Submit</button>
+						<!-- <button class="btn btn-primary"name="skillSubmit" style="margin-top: 10px;" id="skillSubmit">Submit</button> -->
 					</div>
 
 				</div>
 			</div>
+	
+		
 			<div class="accordion-item">
 				<h2 class="accordion-header">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -188,10 +188,7 @@
 									<label style="margin-top: 10px;" class="form-label">CGPA</label>
 									<input type="number" class="form-control" id="cgpa1" placeholder="Enter Cgpa">
 								</div>
-								<!-- <div class="mb-3">
-								<label   class="form-label">Specialization</label>
-								<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Specialization">
-							</div> -->
+								
 								<div class="mb-3">
 									<label class="form-label">Passing Year</label>
 									<input type="number" class="form-control" id="passingYear1"
@@ -200,11 +197,13 @@
 							</div>
 						</div>
 						<button class="btn btn-primary" id="addEducation" style="margin-top: 10px;">Add</button>
-						<button class="btn btn-primary" id="EducationSubmit" style="margin-top: 10px;">Submit</button>
+						<!-- <button class="btn btn-primary"name="EducationSubmit" id="EducationSubmit" style="margin-top: 10px;">Submit</button> -->
 					</div>
 
 				</div>
 			</div>
+		
+		
 			<div class="accordion-item">
 				<h2 class="accordion-header">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -217,11 +216,13 @@
 						<div class="skills" id="project">
 						</div>
 						<button class="btn btn-primary" id="addProject" style="margin-top: 10px;">Add</button>
-						<button class="btn btn-primary" id="projectsSubmit" style="margin-top: 10px;">Submit</button>
+						<!-- <button class="btn btn-primary"name="projectsSubmit" id="projectsSubmit" style="margin-top: 10px;">Submit</button> -->
 					</div>
 
 				</div>
 			</div>
+		
+		
 			<div class="accordion-item">
 				<h2 class="accordion-header">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -234,11 +235,13 @@
 						<div class="skills" id="Certicate">
 						</div>
 						<button class="btn btn-primary" id="addCertificate" style="margin-top: 10px;">Add</button>
-						<button class="btn btn-primary" id="certificateSubmit" style="margin-top: 10px;">Submit</button>
+						<!-- <button class="btn btn-primary"name="certificateSubmit" id="certificateSubmit" style="margin-top: 10px;">Submit</button> -->
 					</div>
 
 				</div>
 			</div>
+		
+		
 			<div class="accordion-item">
 				<h2 class="accordion-header">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -252,25 +255,104 @@
 
 						</div>
 						<button class="btn btn-primary" id="addHobby" style="margin-top: 10px;">Add</button>
-						<button class="btn btn-primary" id="hobbiesSubmit" style="margin-top: 10px;">Submit</button>
+						<!-- <button class="btn btn-primary"name="hobbiesSubmit" id="hobbiesSubmit" style="margin-top: 10px;">Submit</button> -->
 					</div>
 
 				</div>
 			</div>
+		</div>	
+		<div class="butn text-center mt-3">
+			<button onclick="generateResume()"class="btn btn-primary btn-lg">Generate Resume</button>
+		</div>
 
 
 		</div>
 	</div>
+    
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-		crossorigin="anonymous"></script>
-	<script src="./constants.js"></script>
-	<script src="./buildprofile.js"></script>
-	<script>
+	<div class="container1" id="cv-template">
+		<div class="row">
+			<div class="col-md-4 text-center py-2 ms-5 background">
+               <!-- first column -->
+
+               <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4tC1ZREbFEf84QAKDeUkYJVpd5awsNlY7FAZUfqWFZA&usqp=CAU&ec=48600112
+			   alt="PROFILE PHOTO"
+			   class="img-fluid myimg"
+               >
+			   <div class="container2">
+				 <span id="nameT">Varun</span>&nbsp;<span id="lastnameT">Kovuri</span><br>
+				 <span id="dobT">25-02-2000</span>
+				 <p id="addressT">4-2-518/A,Himayatnagar,St.Pauls's School Lane,Hyderabad,500001</p>
+				 <p id="emailT">example@gmail.com</p>
+				 <p><span id="contactT">9991234567,</span>&nbsp<span id="contactT1"> 9912345679</span></p>
+				 <p id="linkedinT"><a href="https://www.linkedin.com/login"></a>https://www.linkedin.com/login</p>
+
+				 <hr />
+				 <h2 >Skills</h2>
+				<ul>
+					<li><span id="skillT">JAVA-</span><span id="lvl1T">intermediate</span></li>
+					<li><span id="skill2T">Python-</span><span id="lvl2T">intermediate</span></li>
+					<li><span id="skill3T">Angular-</span><span id="lvl3T">intermediate</span></li>
+					<li><span id="skill4T">MongoDb-</span><span id="lvl4T">intermediate</span></li>
+					<li><span id="skill5T">React JS-</span><span id="lvl5T">intermediate</span></li>
+				</ul>
+
+			   </div>
+			</div>
+			<div class="col-md-8 py-5">
+                <!-- second column -->
+				<h1 id="nameT2"class="text-center" style="font-weight: 980"><span id="nameT1">Varun </span> Kovuri</h1>
+				<hr />
+				<div class="education mt-3">
+				   <h2 id="header">Education</h2>
+				   <span id="scholT"> School Name- &nbsp;&nbsp; </span> <span id="schlnameT">St. Paul's High School</span><br>
+				   <span id="eduT">Education Qualification </span>- &nbsp;&nbsp; <span id="qualT"> Secondary </span><br>
+				   <span id="cgpaT">Cgpa</span>- &nbsp;&nbsp; <span id="cgpaperT">9.6</span><br>
+				   <span id="passingT">Passing Year</span> -&nbsp;&nbsp; <span id="year">2017</span>
+			    </div> 
+				<div class="project mt-3" >
+					<h2 id="header">Project</h2>
+					<p id="pnameT">Project Name-&nbsp;&nbsp;<span id="projectT">Resume Builder</span></p>
+					<p>Project Description-</p>
+					<textarea class="form-control"name="projectDescription" id="projectDescription" rows="3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam non rerum beatae odit commodi quam praesentium delectus, magnam officia dolore.</textarea>
+					<span>Implementation Year</span>-&nbsp;&nbsp;<span id="projYearT">2023</span>
+				</div>
+				<div class="certification mt-3">
+					<h2 id="header">Certification</h2>
+					<p>Certification Name-&nbsp;&nbsp;<span id="certifyT">Web Development</span></p>
+					<p>Issued By-&nbsp;&nbsp;<span id="websiteT">Techademy</span></p>
+					<p>Certification Id-&nbsp;&nbsp;<span id="certifYidT">123428</span></p>
+				</div>
+				<div class="workExperience mt-3">
+					<h2 id="header">Work Experience</h2>
+					<p>Company Name-&nbsp;&nbsp;<span id="companyT">Seneca Global</span></p>
+					<p>Position-&nbsp;&nbsp;<span id="positionT">Intern</span></p>
+					<p>Start Date-&nbsp;&nbsp;<span id="strtDateT">31-01-2023</span></p>
+					<p>Current Job-&nbsp;&nbsp;<span id="currentjobT">Yes</span></p>
+					<p>Last Date-&nbsp;&nbsp;<span id="lstdateT">10-04-2023</span></p>
+				</div>
+				<div class="hobbies" mt-3>
+					<h2 id="header">Hobbies</h2>
+					<ul>
+						<li id="hobbies1T">Painting</li>
+						<li id="hobbies2T">Reading bookks</li>
+						<li id="hobbies3T">Swimming</li>
+						<li id="hobbies4T">Writing</li>
+					</ul>
+					
+				</div>
+				<div class="submitbutton mt-3 text-center">
+					<button onclick="printResume()" class="background">Print Resume</button>
+				</div>
 
 
-	</script>
+			</div>
+
+		</div>
+    </div>
+	 
+	<script src="./buildprofile2.js"></script>
+	<script src="template.js"></script>
 </body>
 
 </html>
