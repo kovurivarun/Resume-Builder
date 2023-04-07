@@ -1,85 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
-     <!-- <link rel="stylesheet" href="loginpage.css">  -->
-     <script src="https://kit.fontawesome.com/e95cfce662.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="loginnav.css">
+    <!-- <link rel="stylesheet" href="loginpage.css">  -->
+    <script src="https://kit.fontawesome.com/e95cfce662.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="loginnav.css">
 </head>
 <!-- <div class="frst"> -->
-    <body>
-        
+
+<body>
+
     <!-- </body> -->
     <header>
         <div class="container">
             <div>
-                <a href="index.html"> <p class="logo">Resume Builder</p></a>
+                <a href="index.html">
+                    <p class="logo">Resume Builder</p>
+                </a>
             </div>
-          <nav>
-            <ul>
-                <li><a href="./loginpage.html">Log in</a></li>
-                <li><a href="./Signupwithjs.html"target="_blank">Sign up</a></li>
-                <li><a href="./Aboutus.html">About Us</a></li>
-            </ul>
-          </nav> 
-        </div>   
-    </header> 
-
-
- <main>
-    <section class="banner">
-     <form id="login">
-       <h1>LOGIN</h1>
-       <input type="text" id="uname" name="email" class="box" placeholder="Enter Email" required>
-
-       <input type="password" id="pass" name="Password" class="box" placeholder="Enter Password" minlength="8" maxlength="20" required
-       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-       title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number">
-
-        <!-- <button type="submit"  id="submit"> -->
-            <button type = "submit"> Login </button>
-       <a href="./securityquestion.html"><p class="mssg ">Forgot password?</p></a>
-       <p class="mssg1">Not a member? <a href="Signupwithjs.html"target="_blank">Sign-up</a></p>
-     </form>
-    </section>
- </main>
- <footer>
-    <section class="container">
-        <div class="foot">
-            <h3>Resume Builder</h3>
-        </div>
-        <div class="contact">
-            <ul>
-                <li>Chat Hours:</li>
-                <li>mobile number: 9390092899</li>
-                <li>Monday-Friday 9am-6pm</li>
-                <li> <i id="copyright" class="fa-solid fa-copyright"></i><p>2023 Resume Builder</p></li>
-            </ul>
-        </div>
-        <div class="social">
-            <p>Connect with us<br>on social media</p>
-            <ul>
-             <a href="https://www.instagram.com/"><li><i class="fa-brands fa-instagram"></i></li></a>
-              <a href="https://twitter.com/"><li><i class="fa-brands fa-square-twitter"></i></li></a>
-            </ul>
-        </div>    
-        <div class="links">
-            <div class="company">
+            <nav>
                 <ul>
-                    <li class="heading">JOB SEEKERS</li>
-                     <li>Create a Resume</li>
-                    <li>Resume Templates</li>
-                    <li>Customize Templates</li>
-                    <li>Job Search</li>
+                    <li><a href="./loginpage.html">Log in</a></li>
+                    <li><a href="./Signupwithjs.html" target="_blank">Sign up</a></li>
+                    <li><a href="./Aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="banner">
+            <form id="login">
+                <h1>LOGIN</h1>
+                <input type="text" id="uname" name="email" class="box" placeholder="Enter Email" required>
+
+                <input type="password" id="pass" name="Password" class="box" placeholder="Enter Password" minlength="8"
+                    maxlength="20" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number">
+
+                <!-- <button type="submit"  id="submit"> -->
+                <button type="submit"> Login </button>
+                <a href="./securityquestion.html">
+                    <p class="mssg ">Forgot password?</p>
+                </a>
+                <p class="mssg1">Not a member? <a href="Signupwithjs.html" target="_blank">Sign-up</a></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section class="container">
+            <div class="foot">
+                <h3>Resume Builder</h3>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li>Chat Hours:</li>
+                    <li>mobile number: 9390092899</li>
+                    <li>Monday-Friday 9am-6pm</li>
+                    <li> <i id="copyright" class="fa-solid fa-copyright"></i>
+                        <p>2023 Resume Builder</p>
+                    </li>
                 </ul>
             </div>
-  </footer>
+            <div class="social">
+                <p>Connect with us<br>on social media</p>
+                <ul>
+                    <a href="https://www.instagram.com/">
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                    </a>
+                    <a href="https://twitter.com/">
+                        <li><i class="fa-brands fa-square-twitter"></i></li>
+                    </a>
+                </ul>
+            </div>
+            <div class="links">
+                <div class="company">
+                    <ul>
+                        <li class="heading">JOB SEEKERS</li>
+                        <li>Create a Resume</li>
+                        <li>Resume Templates</li>
+                        <li>Customize Templates</li>
+                        <li>Job Search</li>
+                    </ul>
+                </div>
+    </footer>
 
- <script src="./constants.js"></script>
- <script src="./loginpagescript.js"></script>
+    <script src="./constants.js"></script>
+    <script src="./loginpagescript.js"></script>
 </body>
 
 </html>

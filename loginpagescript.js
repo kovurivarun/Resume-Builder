@@ -23,36 +23,38 @@
 
 
 
-const form = document.getElementById("login"); ̰
-const txtemail = form.querySelector("[name='email']");
-const txtpassword = form.querySelector("[name='Password']");
+const form = document.getElementById("login");
+const txtEmail = form.querySelector("[name='email']");
+const txtPassword = form.querySelector("[name='Password']");
 
 form.addEventListener("submit",function(event){
   event.preventDefault();
-  const email = txtemail.value;
-  const password = txtpassword.value;
+  const email = txtEmail.value;
+  const password = txtPassword.value;
   const payload = {
-    email, 
-    password
+      email, 
+      password
+
   };
   
   alert(email + " " + password);
 
-  window.fetch(ApiUrls.LOGIN,
-    { 
-      method: "Post",
-      body: JSON.stringify(payload)
-    }
-  ).then((response) => {
+  window.fetch(window?.config?.ApiUrls?.LOGIN, { 
+      method: "POST",
+      body: JSON.stringify(payload),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+  }).then((response) => {
+    console.log({ response });
    if (response.status == true) {
      alert("login successfully")
      console.log(response);
-     windows.location.href="Signupwithjs.html"; 
+     windows.location.href = window?.config?.AppRoutes?.SIGNUP;
     }
   })
-  
-  .catch((error ) =>{
-    alert(error);
+    .catch((error ) =>{
+    alert(payload);
   });
 });
 // form.addEventListener("submit", function (event) {
