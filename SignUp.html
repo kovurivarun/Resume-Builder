@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e95cfce662.js" crossorigin="anonymous"></script>
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="SignUp.css">
     
 </head>
 <body>
@@ -17,7 +17,7 @@
             </div>
             <nav>
             <ul>
-                <li><a href="./templog.html">Log in</a></li>
+                <li><a href="./Login.html">Log in</a></li>
                 <li><a href="./Aboutus.html">About Us</a></li>
             </ul>
           </nav> 
@@ -84,17 +84,18 @@
                               <div class="input-field">
                                 <label for="security" name="security">Security Question:</label>
                                 <select id="security" required>
-                                 <placeholder>Favourite technology?</placeholder>
-
-                                <option value="Indian"name="Indian">Indian</option>
-                                <option value="Italian"name="Italian">Italian</option>
-                                <option value="Mexican"name="Mexican">Mexican</option>
-				                        <option value="Chinese"name="Chinese">Chinese</option>
+                                <option name="Question1">What is your Maiden Name?</option>
+                                <option name="Question2">What is your favorite country?</option>
+                                <option name="Question3">What is your favorite color?</option>
+				                        <option name="Question4">Enter a Passcode to enter</option>
                                 </select>
                               </div>
-
+                              <div class="input-field">
+                                <label for="SecurityAnswer">Security Answer</label>
+                                <input type="text" id="SecurityAnswer" required>
+                              </div>
                               <div class="ss">
-                                <button id="sub"type="submit">Sign Up</button>
+                                <button id="sub" type="submit">Sign Up</button>
                               </div>
                               <p id="error-message"></p>
                               
@@ -141,7 +142,7 @@
               </ul>
           </div>
 </footer>
-<script src="script.js"></script>
+<script src="SignUp.js"></script>
 </body>
 </html>
 

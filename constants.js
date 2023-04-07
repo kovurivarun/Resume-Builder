@@ -1,43 +1,23 @@
-const baseUrl = http://localhost:5000;
+const APIbaseUrl = http://localhost:5000;
 
- 
+  window.config = {
+    ApiUrls: {
+      LOGIN: `${APIaseUrl}/login`,
+      SIGNUP: `${APIbaseUrl}/signup`
+    },
 
-window.config = {
+    AppRoutes: {
+      LOGIN: 'Login.html',
+      SIGNUP: '/SignUp.html'
+    },
 
-  ApiUrls: {
+    HTTP_METHODS: {
+      POST: 'POST',
+      GET: 'GET'
+    },
 
-    LOGIN: `${baseUrl}/login`,
-
-    SIGNUP: `${baseUrl}/signup`
-
-    
-
-  },
-
- 
-
-  AppRoutes: {
-
-    SIGNUP: '/signup.html',
-
-  },
-
- 
-
-  HTTP_METHODS: {
-
-    POST: 'POST',
-
-    GET: 'GET'
-
-  },
-
- 
-
-  DEFAULT_HEADERS: {
-
-    APPLICATION_JSON: { 'Content-Type': 'application/json' }
+    DEFAULT_HEADERS: {
+      APPLICATION_JSON: { 'Content-Type': 'application/json' }
+    }
 
   }
-
-}
