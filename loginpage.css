@@ -1,0 +1,91 @@
+<<<<<<< HEAD
+=======
+/* background image */
+.frst {
+    display: flex;
+    flex-direction: column;
+
+}
+
+body {
+    background-color: rgb(0, 179, 255);
+    background-image: url(./media/bg.jpg);
+    /*no-repeat center center/cover*/
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+}
+
+
+
+/* form style */
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 400px;
+    /* border: 1px solid#000000; */
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+
+/* heading styling */
+.form h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+    margin: 50px;
+}
+
+/* box styling height width padding etc */
+.box {
+    padding: 12px;
+    margin: 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    /* border-radius: 20px; */
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+
+}
+
+/* button designing */
+#submit {
+    padding: 10px;
+    margin-top: 20px;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    color: #ffffff;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+
+}
+
+/* button hovring */
+#submit:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* message */
+.mssg1 {
+    color: #ffffff;
+    margin: 3rem;
+}
+
+::placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+>>>>>>> 82b1a6bc08b76badeabba7a5f6b0142b96e509ba
