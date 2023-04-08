@@ -1,19 +1,34 @@
+const form = document.getElementById('SignUpForm');
 
-function onSubmitForm() {
-if(!validateForm())
-{
+form.addEventListener("submit",function(event){
+  event.preventDefault();
   var bt = document.getElementById('sub');
-  bt.disabled = true;
-  //document.getElementById("sub").addEventListener("click", () => {
-  
-  // console.log("Hi")
-   window.location.href = "loginpage.html";
-//})
-}
-}
-
-
-
+  if(!validateForm())
+  {
+    bt.disabled = true;
+  }
+  else
+  {
+    bt.disabled = false;
+    window.fetch(window?.config?.ApiUrls?.SIGNUP, {
+      method: "POST",
+      body: JSON.stringify(payload),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then((response) => {
+      console.log({ response });
+    if (response.status == true) {
+      alert("login successfully")
+      console.log(response);
+      windows.location.href = window?.config?.AppRoutes?.SIGNUP;
+      }
+    })
+    .catch((error ) =>{
+      alert(payload);
+    });
+  }
+});
 
 function validateForm() {
   const firstName = document.getElementById("first-name").value.trim();
@@ -60,85 +75,3 @@ function isValidPhone(phone) {
   const phoneRegex = /^[0-9]{10}$/;
   return phoneRegex.test(phone);
 }
-// function manage(firstname) {
-//   var bt = document.getElementById('sub');
-//   if (firstname.value != '') {
-//       bt.disabled = false;
-//   }
-//   else {
-//       bt.disabled = true;
-//   }
-// }
-
-
-// function manage(lastname) {
-//   var bt = document.getElementById('sub');
-//   if (lasttname.value != '') {
-//       bt.disabled = false;
-//   }
-//   else {
-//       bt.disabled = true;
-//   }
-// }
-
-// function manage(gender) {
-//   var bt = document.getElementById('sub');
-//   if (gender.value != '') {
-//       bt.disabled = false;
-//   }
-//   else {
-//       bt.disabled = true;
-//   }
-// }
-// function manage(dob) {
-//   var bt = document.getElementById('sub');
-//   if (dob.value != '') {
-//       bt.disabled = false;
-//   }
-//   else {
-//       bt.disabled = true;
-//   }
-// }
-// function manage(email) {
-//   var bt = document.getElementById('sub');
-//   if (email.value != '') {
-//       bt.disabled = false;
-//   }
-//   else {
-//       bt.disabled = true;
-//   }
-// }
-// function manage(phone) {
-//   var bt = document.getElementById('sub');
-//   if (phone.value != '') {
-//       bt.disabled = false;
-//   }
-//   else {
-//       bt.disabled = true;
-//   }
-// }
-// function manage(password) {
-//   var bt = document.getElementById('sub');
-//   if (password.value != '') {
-//       bt.disabled = false;
-//   }
-//   else {
-//       bt.disabled = true;
-//   }
-// }
-// function manage(confirmpassword) {
-//   var bt = document.getElementById('sub');
-//   if (confirmpassword.value != '') {
-//       bt.disabled = false;
-//   }
-//   else {
-//       bt.disabled = true;
-//   }
-// }
-
-
-
-
-// })
-    
-  
