@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e95cfce662.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="signUp.css">
+    
+</head>
+<body>
+	<header>
+        <div class="container">
+            <div>
+                <a href="index.html"> <p class="logo">Resume Builder</p></a>
+            </div>
+            <nav>
+            <ul>
+                <li><a href="login.html">Log in</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+            </ul>
+          </nav> 
+        </div>   
+    </header> 
+	<main>
+	<section>
+		<div class="container1">
+			<span class="title"><h2>Sign Up</h2></span>
+      <form action="/register" method="post" id="signup-form" onsubmit="return onSubmitForm()">
+				<div class="details">
+					<div class="form first">
+					    <div class="fields">
+                           
+                              <div class="input-field">
+                                <label for="firstname">First Name:</label>
+                                <input type="text" id="firstname"onkeyup="manage(this)" name="firstname"minlength="3"maxlength="20" required>
+                              </div>
+
+                              <div class="input-field">
+                                <label for="lastname">Last Name:</label>
+                                <input type="text" id="lastname"onkeyup="manage(this)" name="lastname"minlength="3"maxlength="20" required>
+                              </div>
+
+                              <div class="input-field">
+                                <label for="gender" name="gender">Gender:</label>
+                                <select id="gender" required>
+                                <!-- <option value="options"name="options">-- Select Gender --</option> -->
+                                <option value="male"name="male">Male</option>
+                                <option value="female"name="female">Female</option>
+                                <option value="other"name="other">Other</option>
+				                        <option value="NotDisclosed"name="NotDisclosed">Prefer not to tell</option>
+                                </select>
+                              </div>
+
+                              <div class="input-field">
+                                <label for="dob">Date of Birth:</label>
+                                <input type="date" id="dob"onkeyup="manage(this)" name="dob" required>
+                              </div>
+
+                              <div class="input-field">
+                                <label for="email">Email:</label>
+                                <input type="text" id="email"onkeyup="manage(this)" name="email" required>
+                                <!-- <p id="error-message"></p> -->
+                              </div>
+
+                              <div class="input-field">
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone"onkeyup="manage(this)" name="phone" pattern="[0-9]{10}" required>
+                              </div>
+
+                              <div class="input-field">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password"onkeyup="manage(this)" name="password" minlength="8"maxlength="20" 
+								                required
+								                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number">
+                              </div>
+
+                              <div class="input-field">
+                                <label for="confirmpassword">Confirm Password:</label>
+                                <input type="password" id="confirmpassword"onkeyup="manage(this)" name="confirmpassword" minlength="8" required>
+                              </div>
+                              <div class="input-field">
+                                <label for="security" name="security">Security Question:</label>
+                                <select id="security" required>
+                                <option name="Question1">What is your Maiden Name?</option>
+                                <option name="Question2">What is your favorite country?</option>
+                                <option name="Question3">What is your favorite color?</option>
+				                        <option name="Question4">Enter a Passcode to enter</option>
+                                </select>
+                              </div>
+                              <div class="input-field">
+                                <label for="SecurityAnswer">Security Answer</label>
+                                <input type="text" id="SecurityAnswer" required>
+                              </div>
+
+                              <div class="ss">
+                                <button id="sub"type="submit">Sign Up</button>
+                              </div>
+                              <p id="error-message"></p>
+                              
+						</div>
+					</div>
+				</div>
+			</form>
+	  </div>
+	</section>
+	</main>
+
+  
+<footer>
+  <section2 class="container">
+      
+    <div class="contact">
+        <ul>
+            
+            <li> <i id="copyright" class="fa-solid fa-copyright"></i><p>2023 Resume Builder</p></li>
+        </ul>
+    </div>
+    
+       
+    
+      
+  </section2>  
+</footer>
+<script src="signUp.js"></script>
+</body>
+</html>
+

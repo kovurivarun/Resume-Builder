@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <a href="index.html">
+                    <p class="logo">Resume Builder</p>
+                </a>
+            </div>
+          <nav>
+            <ul>
+               
+                <li><a href="./signUp.html"target="_blank">Sign up</a></li>
+                <li><a href="./Aboutus.html">About Us</a></li>
+            </ul>
+          </nav> 
+        </div>   
+    </header> 
+    <main>
+        <section>
+         <form id="login">
+           <h1>LOGIN</h1>
+           <input type="text" id="uname" name="email" class="box" placeholder="Enter Email" required>
+    
+           <input type="password" id="pass" name="Password" class="box" placeholder="Enter Password" minlength="8" maxlength="20" required
+           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+           title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number">
+    
+                <button id="submit" type = "submit"><a href="buildprofile.html">Login</a> </button>
+           <a href="./securityquestion.html"><p class="mssg ">Forgot password?</p></a>
+           <p class="mssg1">Not a member? <a href="Signupwithjs.html"target="_blank">Sign-up</a></p>
+         </form>
+        </section>
+     </main>
+     <footer>
+        <section class="container">
+            
+            <div class="contact">
+                <ul>
+                    <li> <i id="copyright" class="fa-solid fa-copyright"></i><p>2023 Resume Builder</p></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+        <script src="./constants.js"></script>
+        <script src="./loginpagescript.js"></script>
+</body>
+</html>
