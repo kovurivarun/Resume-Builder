@@ -34,7 +34,7 @@ form.addEventListener("submit",function(event){
     security,
     SecurityAnswer
   };
-  alert(payload);
+  alert(JSON.stringify(payload));
     window.fetch(window?.config?.ApiUrls?.SIGNUP, {
       method: "POST",
       body: JSON.stringify(payload),
