@@ -1,9 +1,9 @@
-const APIbaseUrl = http://localhost:5000;
+const APIbaseUrl = "http://localhost:5000";
 
   window.config = {
     ApiUrls: {
-      LOGIN: `${APIaseUrl}/login`,
-      SIGNUP: `${APIbaseUrl}/signup`
+      LOGIN: `${APIbaseUrl}/login`,
+      SIGNUP: `${APIbaseUrl}/register`
     },
 
     AppRoutes: {

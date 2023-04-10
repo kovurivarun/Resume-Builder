@@ -22,7 +22,7 @@ form.addEventListener("submit",function(event){
   }).then((response) => {
     console.log({ response });
    if (response.status == true) {
-     alert("login successfully")
+     alert("login successfully");
      console.log(response);
      windows.location.href = window?.config?.AppRoutes?.SIGNUP;
     }

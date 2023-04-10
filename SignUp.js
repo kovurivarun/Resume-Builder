@@ -1,20 +1,46 @@
 const form = document.getElementById('SignUpForm');
+const txtfirstname = form.querySelector("[name='firstname']");
+const txtlastname = form.querySelector("[name='lastname']");
+const txtgender = form.querySelector("[name='gender']");
+const txtdob = form.querySelector("[name='dob']");
+const txtemail = form.querySelector("[name='email']");
+const txtphone = form.querySelector("[name='phone']");
+const txtpassword = form.querySelector("[name='password']");
+const txtsecurity = form.querySelector("[name='security']");
+const txtSecurityAnswer = form.querySelector("[name='SecurityAnswer']");
 
 form.addEventListener("submit",function(event){
   event.preventDefault();
-  var bt = document.getElementById('sub');
-  if(!validateForm())
-  {
-    bt.disabled = true;
-  }
-  else
-  {
-    bt.disabled = false;
+  
+  firstname = txtfirstname.value;
+  lastname = txtlastname.value;
+  gender = txtgender.value;
+  dob =  txtdob.value;
+  email = txtemail.value;
+  phone = txtphone.value;
+  password =  txtpassword.value;
+  security =  txtsecurity.value;
+  SecurityAnswer =  txtSecurityAnswer.value;
+
+
+  const payload = {
+    firstname,
+    lastname,
+    gender,
+    dob,
+    email,
+    phone,
+    password,
+    security,
+    SecurityAnswer
+  };
+  alert(payload);
     window.fetch(window?.config?.ApiUrls?.SIGNUP, {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+
       }
     }).then((response) => {
       console.log({ response });
@@ -27,51 +53,4 @@ form.addEventListener("submit",function(event){
     .catch((error ) =>{
       alert(payload);
     });
-  }
 });
-
-function validateForm() {
-  const firstName = document.getElementById("first-name").value.trim();
-  const lastName = document.getElementById("last-name").value.trim();
-  const gender = document.getElementById("gender").value.trim();
-  const dob = document.getElementById("dob").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const password = document.getElementById("password").value.trim();
-  const confirmPassword = document.getElementById("confirm-password").value.trim();
-  
-  const errorElement = document.getElementById("error-message");
-  
-  if (firstName === "" || lastName === "" || gender === "" || dob === "" || email === "" || phone === "" || password === "" || confirmPassword === "") {
-    errorElement.innerHTML = "Please fill in all fields";
-    return false;
-  }
-  
-  if (!isValidEmail(email)) {
-    errorElement.innerHTML = "Please enter a valid email address";
-    return false;
-  }
-  
-  if (!isValidPhone(phone)) {
-    errorElement.innerHTML = "Please enter a valid 10-digit phone number";
-    return false;
-  }
-  
-  if (password !== confirmPassword) {
-    errorElement.innerHTML = "Passwords do not match";
-    return false;
-  }
-
-  alert("Please press on login button");
-  return true;
-}
-
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-function isValidPhone(phone) {
-  const phoneRegex = /^[0-9]{10}$/;
-  return phoneRegex.test(phone);
-}

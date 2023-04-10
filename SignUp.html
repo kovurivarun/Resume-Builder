@@ -34,17 +34,17 @@
                            
                               <div class="input-field">
                                 <label for="firstname">First Name:</label>
-                                <input type="text" id="firstname"onkeyup="manage(this)" name="firstname"minlength="3"maxlength="20" required>
+                                <input type="text" id="firstname"  name="firstname" minlength="3"maxlength="20" required>
                               </div>
 
                               <div class="input-field">
                                 <label for="lastname">Last Name:</label>
-                                <input type="text" id="lastname"onkeyup="manage(this)" name="lastname"minlength="3"maxlength="20" required>
+                                <input type="text" id="lastname" name="lastname"minlength="3"maxlength="20" required>
                               </div>
 
                               <div class="input-field">
-                                <label for="gender" name="gender">Gender:</label>
-                                <select id="gender" required>
+                                <label for="gender" name="ugender">Gender:</label>
+                                <select id="gender" name="gender" required>
                                 <!-- <option value="options"name="options">-- Select Gender --</option> -->
                                 <option value="male"name="male">Male</option>
                                 <option value="female"name="female">Female</option>
@@ -55,23 +55,23 @@
 
                               <div class="input-field">
                                 <label for="dob">Date of Birth:</label>
-                                <input type="date" id="dob"onkeyup="manage(this)" name="dob" required>
+                                <input type="date" id="dob"  name="dob" required>
                               </div>
 
                               <div class="input-field">
                                 <label for="email">Email:</label>
-                                <input type="text" id="email"onkeyup="manage(this)" name="email" required>
+                                <input type="text" id="email" name="email" required>
                                 <!-- <p id="error-message"></p> -->
                               </div>
 
                               <div class="input-field">
                                 <label for="phone">Phone Number:</label>
-                                <input type="tel" id="phone"onkeyup="manage(this)" name="phone" pattern="[0-9]{10}" required>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
                               </div>
 
                               <div class="input-field">
                                 <label for="password">Password:</label>
-                                <input type="password" id="password"onkeyup="manage(this)" name="password" minlength="8"maxlength="20" 
+                                <input type="password" id="password" name="password" minlength="8"maxlength="20" 
 								                required
 								                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                                 title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number">
@@ -79,11 +79,11 @@
 
                               <div class="input-field">
                                 <label for="confirmpassword">Confirm Password:</label>
-                                <input type="password" id="confirmpassword"onkeyup="manage(this)" name="confirmpassword" minlength="8" required>
+                                <input type="password" id="confirmpassword" name="confirmpassword" minlength="8" required>
                               </div>
                               <div class="input-field">
-                                <label for="security" name="security">Security Question:</label>
-                                <select id="security" required>
+                                <label for="security" >Security Question:</label>
+                                <select id="security" name="security" required>
                                 <option name="Question1">What is your Maiden Name?</option>
                                 <option name="Question2">What is your favorite country?</option>
                                 <option name="Question3">What is your favorite color?</option>
@@ -92,7 +92,7 @@
                               </div>
                               <div class="input-field">
                                 <label for="SecurityAnswer">Security Answer</label>
-                                <input type="text" id="SecurityAnswer" required>
+                                <input type="text" id="SecurityAnswer" name="SecurityAnswer" required>
                               </div>
                               <div class="ss">
                                 <button id="sub" type="submit">Sign Up</button>
@@ -143,6 +143,7 @@
           </div>
 </footer>
 <script src="SignUp.js"></script>
+<script src="constants.js"></script>
 </body>
 </html>
 
